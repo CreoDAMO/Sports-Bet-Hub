@@ -11,7 +11,6 @@ import {
   Target,
   type LucideIcon,
 } from "lucide-react";
-import { SiNfl, SiNba } from "react-icons/si";
 import {
   Sidebar,
   SidebarContent,
