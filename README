@@ -1,3 +1,122 @@
-# README
+# **Sports Bet Hub**
+*A modern, responsive sportsbook web application with live in‑play betting, same‑game parlays, real‑time stats, early cash‑out, and a full esports betting hub.*  
+  [replit.com](https://replit.com/@beautyassassins/Sports-Bet-Hub)
 
-## SprotBook
+---
+
+## **📌 Overview**
+Sports Bet Hub is a full‑stack JavaScript sportsbook platform built to simulate a real betting experience. It includes live odds, dynamic bet slips, parlays, esports markets, and real‑time game data delivered through WebSockets.
+
+This project is designed as a polished MVP that demonstrates sportsbook logic, UI/UX, and real‑time interactivity without requiring production betting APIs.
+
+---
+
+## **✨ Features**
+
+### **🏈 Live In‑Play Sports Betting**
+- Real‑time odds updates via WebSockets  
+- Live game listings across NFL, NBA, MLB, Soccer  
+- Dynamic odds movement simulation  
+- Live indicators and responsive UI  
+
+### **🧮 Same‑Game Parlay Builder**
+- Combine multiple markets from the same matchup  
+- Automatic parlay odds calculation  
+- Bet slip with stake management  
+- Parlay validation logic  
+
+### **📊 Real‑Time Stats Dashboard**
+- Live scores  
+- Possession and momentum indicators  
+- Key player stats  
+- Updated continuously through WebSockets  
+
+### **💵 Early Cash‑Out**
+- Real‑time bet valuation  
+- Cash‑out availability logic  
+- Partial and full cash‑out options  
+
+### **👛 Wallet & Bet History**
+- Mock wallet balance  
+- Transaction tracking  
+- Settled and active bet history  
+
+### **🎮 Esports Betting Hub**
+- Dedicated esports section  
+- Player prop markets (kills, assists, damage, etc.)  
+- Esports stats hub  
+- Integrity alerts for suspicious match behavior  
+  [replit.com](https://replit.com/@beautyassassins/Sports-Bet-Hub)
+
+---
+
+## **🛠️ Tech Stack**
+
+### **Frontend**
+- React (or Replit Webview UI)
+- Responsive layout with modern sportsbook styling
+- Dark theme with animations
+
+### **Backend**
+- Node.js + Express  
+- WebSockets for real‑time updates  
+- Mock data generators for odds & stats  
+
+### **Database**
+- PostgreSQL (Replit DB integration)  
+- Stores users, bets, wallet, and game data  
+
+---
+
+## **📡 Real‑Time Engine**
+The app uses WebSockets to push:
+- Live odds  
+- Game stats  
+- Cash‑out values  
+- Esports integrity alerts  
+
+This ensures instant updates without page reloads.
+
+---
+
+## **🚀 Getting Started**
+
+### **1. Install dependencies**
+```bash
+npm install
+```
+
+### **2. Start the development server**
+```bash
+npm run dev
+```
+
+### **3. Open the app**
+Visit the Replit-hosted URL or `localhost:3000`.
+
+---
+
+## **📁 Project Structure**
+```
+/src
+  /client        # Frontend UI
+  /server        # Express + WebSocket backend
+  /data          # Mock odds, games, esports feeds
+  /db            # PostgreSQL models & queries
+```
+
+---
+
+## **🧪 Future Enhancements**
+- Real sportsbook API integrations  
+- User authentication  
+- Crypto wallet support  
+- Automated odds modeling  
+- Live streaming integration  
+
+---
+
+## **📄 License**
+MIT License — free to use, modify, and build upon.
+
+---
