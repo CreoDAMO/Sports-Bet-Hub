@@ -10,7 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { formatOdds, getStatusLabel } from "@/lib/sports-data";
 import { useBetSlip } from "@/lib/bet-slip-store";
 import { useWebSocket } from "@/hooks/use-websocket";
-import { ArrowLeft, Zap, BarChart3, Target } from "lucide-react";
+import { ArrowLeft, Zap, BarChart3, Target, AlertTriangle } from "lucide-react";
 import { useState, useEffect } from "react";
 
 function BettingOption({
