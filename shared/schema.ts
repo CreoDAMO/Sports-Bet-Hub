@@ -122,6 +122,13 @@ export type GameStats = {
   errors?: number;
   strikeouts?: number;
   walks?: number;
+  // Esports stats
+  kills?: number;
+  deaths?: number;
+  assists_esports?: number;
+  objectives?: number;
+  damage?: number;
+  integrityAlert?: boolean;
 };
 
 export type BetSlipItem = {

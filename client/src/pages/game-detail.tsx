@@ -169,6 +169,12 @@ export default function GameDetail() {
                 {getStatusLabel(g)}
               </Badge>
               <span className="text-xs text-muted-foreground uppercase tracking-wider">{g.league}</span>
+              {homeStats?.integrityAlert && (
+                <Badge variant="destructive" className="flex items-center gap-1">
+                  <AlertTriangle className="w-3 h-3" />
+                  Integrity Alert
+                </Badge>
+              )}
             </div>
             {isLive && <Zap className="w-4 h-4 text-primary" />}
           </div>
@@ -362,6 +368,41 @@ export default function GameDetail() {
                   </CardContent>
                 </Card>
               )}
+
+              {g.sport === "esports" && (
+                <Card>
+                  <CardHeader className="p-4 pb-2">
+                    <CardTitle className="text-sm flex items-center gap-1.5">
+                      <Zap className="w-3.5 h-3.5 text-primary" />
+                      Player Prop Markets
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-4 pt-2 grid grid-cols-2 gap-2">
+                    <BettingOption
+                      label="Kills"
+                      value="Player 1 Over 12.5"
+                      odds={-110}
+                      gameId={g.id}
+                      betType="prop"
+                      selection="player_kills_over"
+                      displaySelection="Player 1 Over 12.5 Kills"
+                      homeTeam={g.homeTeam}
+                      awayTeam={g.awayTeam}
+                    />
+                    <BettingOption
+                      label="Kills"
+                      value="Player 1 Under 12.5"
+                      odds={-110}
+                      gameId={g.id}
+                      betType="prop"
+                      selection="player_kills_under"
+                      displaySelection="Player 1 Under 12.5 Kills"
+                      homeTeam={g.homeTeam}
+                      awayTeam={g.awayTeam}
+                    />
+                  </CardContent>
+                </Card>
+              )}
             </>
           )}
         </TabsContent>
@@ -416,6 +457,19 @@ export default function GameDetail() {
                   )}
                   {homeStats.strikeouts !== undefined && awayStats.strikeouts !== undefined && (
                     <StatBar label="Strikeouts" homeValue={homeStats.strikeouts} awayValue={awayStats.strikeouts} />
+                  )}
+                  {/* Esports Stats */}
+                  {homeStats.kills !== undefined && awayStats.kills !== undefined && (
+                    <StatBar label="Kills" homeValue={homeStats.kills} awayValue={awayStats.kills} />
+                  )}
+                  {homeStats.deaths !== undefined && awayStats.deaths !== undefined && (
+                    <StatBar label="Deaths" homeValue={homeStats.deaths} awayValue={awayStats.deaths} />
+                  )}
+                  {homeStats.damage !== undefined && awayStats.damage !== undefined && (
+                    <StatBar label="Total Damage" homeValue={homeStats.damage} awayValue={awayStats.damage} />
+                  )}
+                  {homeStats.objectives !== undefined && awayStats.objectives !== undefined && (
+                    <StatBar label="Objectives Secured" homeValue={homeStats.objectives} awayValue={awayStats.objectives} />
                   )}
                 </>
               ) : (

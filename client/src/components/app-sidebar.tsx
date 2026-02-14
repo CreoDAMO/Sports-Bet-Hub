@@ -9,6 +9,8 @@ import {
   Circle,
   Diamond,
   Target,
+  Gamepad2,
+  AlertTriangle,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -35,6 +37,7 @@ const sports: { title: string; url: string; icon: LucideIcon }[] = [
   { title: "NBA", url: "/sport/nba", icon: Circle },
   { title: "MLB", url: "/sport/mlb", icon: Diamond },
   { title: "Soccer", url: "/sport/soccer", icon: Target },
+  { title: "Esports", url: "/sport/esports", icon: Gamepad2 },
 ];
 
 export function AppSidebar({ balance }: { balance: number }) {

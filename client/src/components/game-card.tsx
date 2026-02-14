@@ -1,11 +1,11 @@
 import { useLocation } from "wouter";
-import type { Game } from "@shared/schema";
+import type { Game, GameStats } from "@shared/schema";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { formatOdds, getStatusLabel } from "@/lib/sports-data";
 import { useBetSlip } from "@/lib/bet-slip-store";
-import { Clock, Zap } from "lucide-react";
+import { Clock, Zap, AlertTriangle } from "lucide-react";
 
 function OddsButton({
   label,
@@ -78,6 +78,9 @@ export function GameCard({ game }: { game: Game }) {
             <span className="text-xs text-muted-foreground uppercase tracking-wider">
               {game.league}
             </span>
+            {(game.homeStats as GameStats)?.integrityAlert && (
+              <AlertTriangle className="w-3.5 h-3.5 text-destructive" />
+            )}
           </div>
           {isLive && (
             <Zap className="w-3.5 h-3.5 text-primary" />
